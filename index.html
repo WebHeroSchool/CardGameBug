@@ -1,47 +1,26 @@
-<head>
-	<link rel="stylesheet", href="styles.css">
-	<link rel="stylesheet" type="text/css" href="/fonts.css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>Карты</title>
-</head>
-<body>
-  <header class="header">
-    <img src="img/Background.png" class="page__background">
-  </header>
-  <section class="menu" id='menu'>
-    <h1 class="menu__title">Выберите уровень сложности:</h1>
-    <h5 class="menu__subtitle">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</h5>
-    <div class="menu__options">
-      <div>
-        <div class='pre'>
-          <h2 class='check selected' id='easyCheck'></h2>
-        </div>
-        <h2 class="menu__option" id='easyLvl'>Простой</h2>
-      </div>
-      <div>
-        <div class='pre'>
-          <h2 class='check' id='midCheck'></h2>
-        </div>
-        <h2 class='menu__option' id='midLvl'>Средний</h2>
-      </div>
-      <div>
-        <div class='pre'>
-          <h2 class='check' id='heavyCheck'></h2>
-        </div>
-        <h2 class="menu__option" id='heavyLvl'>Сложный</h2>
-      </div>
+    <title>Найди баг</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fonts.css">
+  </head>
+  <body>
+    <div class="face">
+      <h1 class="face__title">Выберите уровень сложности:</h1>
+      <p class="face__text">Выберите сложность и игра начнётся. Чем выше уровень - тем больше будет выборка карт.</p>
+      <ul class="face__level">
+        <li class="face__level_elemet">Простой</li>
+        <li class="face__level_elemet">Средний</li>
+        <li class="face__level_elemet">Сложный</li>
+      </ul>
+      <button type="button" name="button" class="face__start">Начать игру</button>
+      <img src="img/card.png" class="face__card-1" alt="Карта 1">
+      <img src="img/card.png" class="face__card-2" alt="Карта 1">
     </div>
-    <div class='menu__bottom'>
-      <button type="button" class="menu__btn" id='confirmBtn'>Начать игру</button>
-      <div class='menu__cards'>
-        <img src="img/card.png" class="menu__card menu__card_back">
-        <img src="img/card_end.png" class="menu__card menu__card_front">
-      </div>
-    </div>
-  </section>
-  <section class="game displayNone" id='game'>
-    <div class='cardsIn1' id='cardsIn'>
-    </div>
-  </section>
-  <script src='./scripts.js'></script>
-</body>
+    <div class="game visible"></div>
+    <script type="text/javascript" src="./scripts.js"></script>
+  </body>
+</html>
