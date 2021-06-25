@@ -77,12 +77,12 @@ function getRandomInt(min, max) {
 function generateCardsTemplate(numb, numbInLine, numbLines) {
   let imgStringStart = `<div class="scene">
   <div class="card">
-  <img src="img/card.png" class="game__card game__card_front">`;
+  <img src="img/card.png" alt="Карта" class="game__card game__card_front">`;
   let imgStringEnd = ``;
-  let imgStringBug = `<img src="img/card_bug.png" class="game__card game__card_back">
+  let imgStringBug = `<img src="img/bug.png" alt="Карта с багом" class="game__card game__card_back">
   </div>
   </div>`;
-  let imgStringFail = `<img src="img/card_end.png" class="game__card game__card_back">
+  let imgStringFail = `<img src="img/gameOver.png" alt="Карта ошибки" class="game__card game__card_back">
   </div>
   </div>`;
   let imgLineBreak = `</div><div class="cardLine">`;
