@@ -1,0 +1,204 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: url('img/Background.png') no-repeat;
+  background-size: cover;
+  color: #FFF;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0;
+  back
+}
+
+.face__title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 57px;
+  line-height: 67px;
+  margin: 12.5vh 0 10.5px 7.15%;
+}
+
+.face__text {
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 22px;
+  margin: 0 0 5.68vh 7.3%;
+}
+
+.face__level {
+  padding: 0;
+  margin: 0 0 10.84vh 10.56%;
+  list-style: none;
+}
+
+.face__level_elemet {
+  font-size: 50px;
+  line-height: 59px;
+  margin-bottom: 2.34vh;
+  cursor: pointer;
+  position: relative;
+}
+
+.face__level_elemet:hover {
+  color: #D62B2E;
+}
+
+.face__level_elemet-active::before {
+  width: 18px;
+  height: 18px;
+  content: "";
+  background-color: #D62B2E;
+  position: absolute;
+  top: calc(50% - 9px);
+  left: -45px;
+  transform: rotate(45deg);
+}
+
+.face__start {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 37px;
+  color: #FFF;
+  background-color: #D62B2E;
+  width: 352px;
+  height: 99px;
+  margin: 0 0 0 7.15%;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.face__card-1 {
+  position: absolute;
+  left: 61.67%;
+  top: 51.76vh;
+  transform: rotate(11.9deg);
+}
+
+.face__card-2 {
+  position: absolute;
+  left: 74.17%;
+  top: 53.52%;
+  transform: rotate(39.26deg);
+}
+
+.game {
+  display: flex;
+  height: 740px;
+  width: 730px; 
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10% 25.5%;
+}
+
+.width {
+  width: 1210px;
+  margin: 10% 9%;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 218px;
+  height: 341px;
+  perspective: 1000px;
+  margin: 0px 24px 0px 0;
+}
+
+.flip-card:hover {
+  animation: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+@keyframes move {
+  50% {
+    transform: rotate(-3.08deg) translateY(-30px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(-22px);
+  }
+}
+
+.flip-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.active {
+  transform: rotateY(180deg);
+}
+
+.flip-card__front, .flip-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card__back {
+  transform: rotateY(180deg);
+}
+
+.visible {
+  display: none;
+}
+
+@media all and (max-width:  1330px) {
+  .face__card-1, .face__card-2 {
+    margin-left: -10%;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .face {
+    height: auto;
+  }
+  .face__card-1, .face__card-2 {
+    margin-left: -12%;
+  }
+}
+
+@media all and (max-width: 899px) {
+  body {
+    margin-left: -1%;
+  }
+  .face__card-1, .face__card-2 {
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 580px) {
+  .face__title, .face__level {
+    font-weight: 200;
+    font-size: 50px;
+    width: 400px;
+  }
+
+  .face__card-1, .face__card-2 {
+    margin-top: -10%;
+    width: 120px;
+    height: auto;
+    margin-left: -6%;
+  }
+
+  .face__title {
+    margin-top: 0%;
+  }
+
+  .face__text {
+    max-width: 80%;
+  }
+}
