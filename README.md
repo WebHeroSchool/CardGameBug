@@ -1,1 +1,1 @@
-# CardGameBug
+# Codacy творит дичь
